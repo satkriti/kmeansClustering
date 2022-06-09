@@ -35,11 +35,7 @@ cor(iris1$Sepal.Length, iris1$Petal.Length)
 #what about the widths
 cor(iris1$Sepal.Width, iris1$Petal.Width) #-ve correlation, that too not strong
 
-#This is an unsupervised learning algorithm and based on the problem statement I decided to go with K-means for Clustering
-
-#the cluster needs to be found out and here I have used the elbow method
-
-#The R code below determine the optimal number of clusters for k-means clustering:
+############///Kmeans///############################
 
 #to find optimum number of clusters
 WCSS = vector()
@@ -47,17 +43,17 @@ for(i in 1:10){
   WCSS[i] = sum(kmeans(iris1 ,i)$withinss)
 }
 
-#Elbow PLOT
+#elbow plot
 plot(1:10, WCSS, type = 'b', xlab = 'no. of clusters', ylab = 'WCSS')
-#take cluster val = 3
+#take cluster val = 3 based on the point on the plot
 
-# Implementing K-means
+######### Implementing K-means
 
 #when cluster numbers = 3
 kmean2 = kmeans(iris1, 3)
 kmean2$centers #return the location of each centroid
 kmean2$cluster #return a vector of numbers ranging from 1 to 3
-#depicting which observations belong to which cluster 1/2/3
+#depicting which observations belong to which cluster from 1 to 3
 
 kmean2#check WCSS Value
 #The 3 clusters are made which are of 62, 38, 50 sizes respectively. 
