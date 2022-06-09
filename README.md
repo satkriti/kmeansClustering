@@ -14,6 +14,7 @@ There are various methods while using K means to find out the optimum  number of
  The answer to the PS is 3
  
  Predicted the clusters visually using cluster package.
+ 
  Code:
  clusplot(iris1, kmean2$cluster, lines = 0, shade = TRUE, color = TRUE, labels = 4, xlab = 'Sepal.Length', ylab = 'Sepal.Width')
  
