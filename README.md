@@ -1,6 +1,6 @@
 # kmeansClustering
 
-Problem Statement: From a built in dataset - IRIS, in R, predict the number of clusters and predict it visually.
+Problem Statement: From a built in dataset - IRIS, in R, predict the number of clusters and represent it visually.
 
 Since this is an unsupervised learning and we had to use clustering, I have gone with K-means 
 
